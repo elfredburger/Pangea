@@ -17,7 +17,7 @@ def get_loc(message):
     x = int((800 / 360.0) * (180 + longitude))
     y = int((400 / 180.0) * (90 - latitude))
     r=10
-    image = Image.open('def.jpg')
+    image = Image.open('def.JPG')
     draw = ImageDraw.Draw(image)
     draw.ellipse((x-r,y-r,x+r,y+r),fill=(255,0,0,0))
     bot.send_photo(message.from_user.id,image)
